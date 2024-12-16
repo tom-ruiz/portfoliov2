@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+
+    "dotenv": "^16.4.5",
+    "flickity": "^3.0.0",
+    "flickity-hash": "^2.0.1",
+    "vite": "^5.2.11"
+  },
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}

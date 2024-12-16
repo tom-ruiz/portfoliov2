@@ -1,0 +1,33 @@
+{
+  "resources/js/index.js": {
+    "file": "js/index-CB70Oe-K.js",
+    "name": "index",
+    "src": "resources/js/index.js",
+    "isEntry": true,
+    "css": [
+      "css/index-DVwj5MHf.css"
+    ],
+    "assets": [
+      "otf/Korolev-Thin-Bm44fpNm.otf",
+      "otf/Korolev-Light-DQqjzlSi.otf",
+      "otf/Korolev-Medium-D5MrvsJo.otf",
+      "otf/Runalto-CCm4jkUC.otf"
+    ]
+  },
+  "resources/static/fonts/korolev/Korolev-Light.otf": {
+    "file": "otf/Korolev-Light-DQqjzlSi.otf",
+    "src": "resources/static/fonts/korolev/Korolev-Light.otf"
+  },
+  "resources/static/fonts/korolev/Korolev-Medium.otf": {
+    "file": "otf/Korolev-Medium-D5MrvsJo.otf",
+    "src": "resources/static/fonts/korolev/Korolev-Medium.otf"
+  },
+  "resources/static/fonts/korolev/Korolev-Thin.otf": {
+    "file": "otf/Korolev-Thin-Bm44fpNm.otf",
+    "src": "resources/static/fonts/korolev/Korolev-Thin.otf"
+  },
+  "resources/static/fonts/runalto/Runalto.otf": {
+    "file": "otf/Runalto-CCm4jkUC.otf",
+    "src": "resources/static/fonts/runalto/Runalto.otf"
+  }
+}

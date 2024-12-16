@@ -1,0 +1,28 @@
+{% block html_head_container %}
+	{% include './_partials/html-header.twig' %}
+	{% block head %}{% endblock %}
+{% endblock %}
+<body class="{{ body_class }}" data-template="base.twig">
+{% if function('function_exists', 'gtm4wp_the_gtm_tag') %}
+	{{ function('gtm4wp_the_gtm_tag') }}
+{% endif %}
+{# Homepage et navbar #}
+{% block header %}
+	{% include './_partials/header.twig' %}
+{% endblock %}
+<section id="content" role="main" class="content-wrapper home-container-top">
+	<!-- MENU MOBILE NAV -->
+	{% include "./components/menu-mobile.twig" with {'items': menu.get_items} %}
+	{% block content %}
+		Sorry, no content
+	{% endblock %}
+</section>
+
+{% block footer %}
+	<footer id="footer">
+		{% include './_partials/footer.twig' %}
+	</footer>
+	{{ function('wp_footer') }}
+{% endblock %}
+</body>
+</html>

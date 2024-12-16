@@ -1,0 +1,21 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-12">
+          {% for post in posts %}
+            {% include ['cms/tease-'~post.post_type~'.twig', 'tease.twig'] %}
+          {% endfor %}
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <div id="sidebar">
+            {{ sidebar }}
+          </div>
+        </div>
+      </div>
+      {% include '_partials/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+    </div>
+  </div>
+{% endblock %}

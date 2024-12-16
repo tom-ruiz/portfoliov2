@@ -1,0 +1,28 @@
+{% if items %}
+	<ul class="menu">
+		{% for item in items %}
+			{% set is_active = item.link == current_url %}
+			{% if item.children %}
+				<li class="menu-item {{ item.classes | join(' ') }} {{ is_active ? 'active' }}">
+					<a class="menu-link" href="{{ item.link }}">{{ item.title }}
+						{{ source(directory ~ '/assets/svg/fleche-blanche.svg') }}
+					</a>
+					{% if item.children %}
+						<ul class="submenu">
+							{% for child in item.children %}
+								{% set is_active_child = child.link == current_url %}
+								<li class="submenu-item {{ is_active_child ? 'active' }}">
+									<a class="submenu-link" href="{{ child.link }}">{{ child.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>
+			{% else %}
+				<li class="{{ item.classes | join(' ') }} {{ is_active ? 'active' }}">
+					<a class="menu-link" href="{{ item.link }}" target="{{ item.target }}">{{ item.title }}</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+{% endif %}

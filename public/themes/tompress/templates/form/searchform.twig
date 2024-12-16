@@ -1,0 +1,10 @@
+<div class="search-form top-search-form">
+	<form role="search" method="get" id="searchform" class="searchform" action="{{site.link}}">
+		<div>
+			<input type="text" placeholder="{{ __('Que recherchez-vous ?', 'tompress') }}" value="{{ function('get_search_query') }}" name="s" id="s"/>
+			<button type="submit" id="searchsubmit" value="Search">
+				<img src="{{ theme.path() }}/assets/svg/picto_recherche.svg">
+			</button>
+		</div>
+	</form>
+</div>

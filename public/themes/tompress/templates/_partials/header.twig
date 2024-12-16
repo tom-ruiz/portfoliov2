@@ -1,0 +1,17 @@
+<header class="header" id="main-header">
+	{% block header %}
+		<div class="wrapper container-desktop">
+			<div class="hdr-nav">
+				<a class="hdr-logo-link" href="/" rel="home"></a>
+				{% include "./components/menu.twig" with {'items': main_menu.get_items} %}
+				<div class="hdr-nav-buttons">
+					<a class="hdr-nav-buttons__item" href="/contact/" rel="home">
+						<span>PRENDRE RDV</span>
+
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- Nav menu mobile -->
+	{% endblock %}
+</header>
