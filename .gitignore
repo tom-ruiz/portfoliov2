@@ -1,13 +1,63 @@
-languages
-mu-plugins/*
-!mu-plugins/mu-plugins.php
-plugins/*
-!plugins/index.php
-!plugins/advanced-custom-fields-pro
-!plugins/elementor-pro
-!plugins/elementor-pro/core/upgrade
-!plugins/dokan-lite
-!plugins/dokan-pro
-upgrade
-uploads
-wordpress
+# Système
+.DS_Store
+Thumbs.db
+*.log
+*.lock
+*.bak
+*.tmp
+
+# Fichiers de cache
+.cache/
+tmp/
+logs/
+node_modules/
+vendor/
+composer.lock
+package-lock.json
+yarn.lock
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+
+# Configuration des IDE et éditeurs de texte
+.idea/
+.vscode/
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/debug.log
+
+# Laravel
+bootstrap/cache/
+storage/*.key
+storage/logs/
+storage/framework/
+public/storage
+.env
+.env.example
+
+# Fichiers dépendants et compilés
+composer.phar
+public/build/
+*.tar.gz
+*.zip
+
+# Divers
+*.sql
+*.sqlite
+*.db
+*.log
+error_log
+
+# Ignorer les fichiers de debug
+phpunit.xml
+phpunit.xml.dist
+coverage/
+tests/_output/

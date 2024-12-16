@@ -1,0 +1,13 @@
+languages
+mu-plugins/*
+!mu-plugins/mu-plugins.php
+plugins/*
+!plugins/index.php
+!plugins/advanced-custom-fields-pro
+!plugins/elementor-pro
+!plugins/elementor-pro/core/upgrade
+!plugins/dokan-lite
+!plugins/dokan-pro
+upgrade
+uploads
+wordpress
