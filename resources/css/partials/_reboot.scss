@@ -1,1 +1,81 @@
 // reboot
+@import "./variables";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Nous voulons que le body prenne toute la hauteur de l'écran */
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: $font-cabin;
+}
+
+h1 {
+  font-family: "Compressa VF";
+  text-rendering: optimizeSpeed;
+  color: $yellow;
+  width: 100%;
+  user-select: none;
+  line-height: 0.8em;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: 100;
+  text-align: center;
+  width: 100vw;
+}
+h1 span {
+  transform: translateY(-10px);
+  user-select: none;
+}
+h1.flex {
+  display: flex;
+  justify-content: space-between;
+}
+h1.stroke span {
+  position: relative;
+  color: #211d26;
+  line-height: inherit;
+}
+h1.stroke span:after {
+  content: attr(data-char);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #fe6730;
+  position: absolute;
+  left: 0;
+  line-height: inherit;
+  color: transparent;
+  z-index: -1;
+}
+#content::-webkit-scrollbar {
+  display: none; /* Masque la barre de défilement sur Webkit (Chrome, Safari, etc.) */
+}
+
+#content {
+  -ms-overflow-style: none; /* Masque la barre de défilement sur IE/Edge */
+  scrollbar-width: none; /* Masque la barre de défilement sur Firefox */
+  height: 100vh; /* La hauteur de la fenêtre */
+  overflow-y: scroll; /* Permet le défilement vertical */
+  scroll-snap-type: y mandatory; /* Défilement "snap" vertical obligatoire */
+}
+
+.section {
+  width: 100%;
+  height: 100vh; /* Chaque section prend toute la hauteur de la fenêtre */
+  scroll-snap-align: start; /* Assure que chaque section commence au début du conteneur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Par défaut, toutes les sections sont cachées sauf la première */
+.hidden {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
