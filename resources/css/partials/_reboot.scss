@@ -6,16 +6,24 @@ body {
   padding: 0;
   height: 100%; /* Nous voulons que le body prenne toute la hauteur de l'écran */
   scroll-behavior: smooth;
+  background-color: $white;
+  cursor: none;
 }
 
 p {
-  font-family: $font-cabin;
+  font-family: $font-quicksand;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 2px;
 }
 
-h1 {
-  font-family: "Compressa VF";
+
+
+.text-transition {
+
+  font-family: $font-georema;
   text-rendering: optimizeSpeed;
-  color: $yellow;
+  color: $black;
   width: 100%;
   user-select: none;
   line-height: 0.8em;
@@ -24,30 +32,16 @@ h1 {
   font-weight: 100;
   text-align: center;
   width: 100vw;
+  
+
 }
-h1 span {
+.text-transition span {
   transform: translateY(-10px);
   user-select: none;
 }
-h1.flex {
-  display: flex;
-  justify-content: space-between;
-}
-h1.stroke span {
-  position: relative;
-  color: #211d26;
-  line-height: inherit;
-}
-h1.stroke span:after {
-  content: attr(data-char);
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #fe6730;
-  position: absolute;
-  left: 0;
-  line-height: inherit;
-  color: transparent;
-  z-index: -1;
-}
+
+
+
 #content::-webkit-scrollbar {
   display: none; /* Masque la barre de défilement sur Webkit (Chrome, Safari, etc.) */
 }
@@ -78,4 +72,63 @@ h1.stroke span:after {
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+.cursor {
+  pointer-events: none;
+  
+  &__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference ;
+    z-index: 1000;
+    &--big{
+      z-index: 5;
+    }
+    circle {
+      fill: $white;
+    }
+  }  
+  
+
+} 
+
+.img-photom{
+  transform: translate(0%, 36%);
+  position: relative;
+  z-index: 2;
+  img{
+    width: 468px !important;
+    height: 834px !important;
+  }
+}
+
+.overflow-container1{
+  position: relative;
+
+}
+
+#hero .uagb-container__video-wrap {
+  position: fixed !important;
+}
+
+
+
+.typewriter {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  list-style-type: none; /* Retirer les puces de la liste */
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid black; /* Effet de curseur clignotant */
+  display: inline-block;
+}
+
+.typewriter li {
+  margin: 0;
+  padding: 0;
 }

@@ -1,0 +1,11 @@
+.uagb-icon-list__wrap{
+    gap: 20px;
+    .wp-block-uagb-icon-list-child{
+
+        cursor: pointer;
+    }
+    .uagb-icon-list__label{
+        font-family: $font-quicksand;
+        font-weight: 400;
+    }
+}

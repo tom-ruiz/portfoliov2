@@ -10,9 +10,7 @@
           {% endfor %}
         </div>
         <div class="col-lg-4 col-sm-12">
-          <div id="sidebar">
-            {{ sidebar }}
-          </div>
+
         </div>
       </div>
       {% include '_partials/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}

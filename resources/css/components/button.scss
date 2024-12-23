@@ -1,0 +1,37 @@
+.button-primary {
+    position: relative;
+    display: inline-block;
+  &.contact-home{
+    position: absolute;
+    z-index: 20;
+    bottom: 30em;
+    right: 12em;
+    a.wp-block-button__link{
+background : $blue !important;
+    }
+}
+    a.wp-block-button__link {
+      position: relative;
+      z-index: 3;
+      background: $gradient !important;
+      color: $black !important;
+      font-family: $font-cabin;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: 2px solid $black !important;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      letter-spacing: 4px;
+      border-radius: 30px;
+      padding: 12px 30px;
+      transition: all 0.2s ease-in-out;
+  padding: 20px 40px;
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        color: $white !important;
+        background: $black !important;
+        border-color: $orange !important;
+      }
+    }
+  }
+  

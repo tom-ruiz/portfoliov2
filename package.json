@@ -5,7 +5,7 @@
     "dev": "vite"
   },
   "dependencies": {
-
+    "dat.gui": "^0.7.9",
     "dotenv": "^16.4.5",
     "flickity": "^3.0.0",
     "flickity-hash": "^2.0.1",
