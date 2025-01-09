@@ -6,19 +6,7 @@
 	<div class="blog-single">
 		<div class="row">
 			<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-				{% if(post.format() == 'video') %}
-					{% if post.meta('soleterre_featured_video') is not empty %}
-						<div class="featured-video">
-							<iframe src="{{ post.meta('soleterre_featured_video') }}" width="100%" height="381" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-						</div>
-					{% endif %}
-				{% else %}
-					{% if post.thumbnail.src %}
-
-						<img class="post-thumbnail-img" src="{{ post.thumbnail.src }}" alt="{{ post.title }}"/>
-
-					{% endif %}
-				{% endif %}
+	
 				<section class="article-content">
 					<div class="article-body">
 						{{ post.content }}

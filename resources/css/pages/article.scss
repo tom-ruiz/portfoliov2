@@ -1,0 +1,31 @@
+.article-content{
+    h2{
+        font-size: 65px;
+    }
+    h4{
+        font-size: 35px;
+        color: $orange;
+    }
+    p{letter-spacing: 1Px;
+    font-size: 17px;
+    font-family: $font-cabin;
+}
+
+h3{
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+}
+
+.article-link{
+    font-family: $font-cabin;
+    font-size: 17px;
+    color: $blue;
+    text-decoration:underline;
+}
+
+.uagb-post__excerpt{
+font-size: 17px;
+font-family: $font-cabin;
+color: lighten($color: $black, $amount: 20%);
+}

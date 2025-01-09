@@ -1,0 +1,163 @@
+/* Style de la barre de navigation */
+.side-nav {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.222);
+    width: 5vw;  /* Largeur du rectangle au départ */
+    height: 5vh;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 1000;
+    font-family: $font-quicksand;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    align-items: center;
+    transition: all 0.3s ease; /* Transition pour déployer */
+    overflow: hidden;  /* Masquer tout ce qui dépasse */
+    @media (max-width: 768px) {
+        top: 2em;
+        right: 2em;
+        padding: 1.5em;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+
+        ul{
+            display: none;
+        }
+    }
+    svg{
+        fill: $white;
+    }
+}
+@media (min-width: 768px) {
+.side-nav:hover {
+    background-color: $white;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 20px 0 0 20px;
+    top: 0;
+    right: 0;
+    width: 15vw;  /* Largeur lorsqu'on survole */
+    svg{
+        display: none;
+    }
+
+}
+.side-nav:hover ul li {
+    display: block; /* Afficher les éléments de la liste au survol */
+}
+.side-nav ul li a:hover {
+    background-color: $blue;
+}}
+@media (max-width: 768px) {
+
+.side-nav.mobile {
+    background-color: $white;
+    height: 90%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    top: 2em;
+    right: 1em;
+display: flex;
+    width: 80%;  /* Largeur lorsqu'on survole */
+    svg{
+        display: block;
+        fill: $black;
+        width: 2em;
+    }
+    ul{
+        display: block;
+        gap: 5px;
+    }
+
+}
+.side-nav.mobile ul li {
+    display: block; /* Afficher les éléments de la liste au survol */
+}
+
+.side-nav ul li a {
+    padding: 15px 10px !important;
+}
+
+}
+
+/* Style de la liste des éléments */
+.side-nav ul {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;  /* S'adapte à la largeur de .side-nav */
+}
+
+/* Style de chaque élément de la liste (sans mix-blend-mode) */
+.side-nav ul li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    display: none; /* Masqué par défaut */
+  
+}
+
+/* Style des liens */
+.side-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.15em;
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    font-family: $font-cabin;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius:30px;
+    white-space: nowrap; /* Empêcher la ligne de se couper */
+    mix-blend-mode: normal; /* Annule l'effet de mix-blend-mode hérité */
+}
+
+/* Couleurs différentes pour chaque élément */
+.side-nav ul li a:nth-child(1) {
+    background-color: $black; /* Section 1 */
+}
+
+.side-nav ul li a:nth-child(2) {
+    background-color: $black; /* Section 2 */
+}
+
+.side-nav ul li a:nth-child(3) {
+    background-color: $black; /* Section 3 */
+}
+
+.side-nav ul li a:nth-child(4) {
+    background-color: $black; /* Section 4 */
+}
+
+/* Effet de la barre de navigation lors du survol */
+
+/* Effet sur les éléments de la liste lorsque la barre est déployée */
+
+.side-nav ul li a.active {
+    background: $gradient !important;
+    border: 2px solid $black !important;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    color: $black;
+    
+ 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

@@ -1,0 +1,46 @@
+.wp-block-uagb-tabs{
+    color: $white;
+border-style: none !important;
+justify-content: center;
+.uagb-tab a::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Positionne la barre en bas du lien */
+    left: 0;
+    width: 100%; /* Par défaut, la barre couvre toute la largeur de l'élément */
+    height: 2px; /* Taille de la barre */
+    background-color: $blue; /* Couleur de la barre */
+    transform: scaleX(0); /* On commence avec une barre invisible */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; /* Transition fluide pour l'animation */
+  }
+  .uagb-tab.uagb-tabs__active a::after {
+    transform: scaleX(1); /* La barre devient visible et s'étend */
+    transform-origin: bottom left; /* L'animation commence à gauche */
+  }
+  
+
+/* Applique la couleur du texte sur chaque onglet actif */
+.uagb-tabs__panel .uagb-tab:first-child.uagb-tabs__active a::after {
+    background-color: $orange; /* Couleur orange pour le premier onglet */
+  }
+  
+  /* Sélection du dernier onglet avec une barre jaune */
+  .uagb-tabs__panel .uagb-tab:last-child.uagb-tabs__active a::after {
+    background-color: $yellow; /* Couleur jaune pour le dernier onglet */
+  }
+
+
+    .uagb-tabs-list{
+text-decoration: none;
+font-family: $font-georema;
+font-size: 36px;
+font-weight: 700 !important;
+    }
+}
+.uagb-tabs__body-container{
+   p{
+    letter-spacing: 1px !important;
+    margin: 40px 0 !important;
+   }
+}

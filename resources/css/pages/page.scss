@@ -8,6 +8,17 @@ color: $white;
 font-size: 22px;
     }
 
+    @media (max-width: 1450px) {
+      row-gap: 0 !important;
+      h4{
+        font-size: 45px;
+      }
+    }
+    @media (max-width: 768px) {
+      h4{
+        font-size: 32px;
+      }
+    }
 }
 
   
@@ -19,7 +30,7 @@ font-size: 22px;
   .design-active {
     background-color: $orange !important;
     min-height: 70vh !important;
-    border-radius: 30px 30px 0px 0px !important;
+  
     .dev-active {
         background-color: $white !important;
         
@@ -29,7 +40,6 @@ font-size: 22px;
   .dev-active {
     background-color: $blue !important;
  min-height: 70vh !important;
- border-radius: 30px 30px 0px 0px !important;
 
   }
   
@@ -38,5 +48,57 @@ font-size: 22px;
     h3{
         font-size: 22px;
         letter-spacing: 6px;
+    }
+  }
+
+  .home-content{
+    &-firstview{
+      height: calc(60vh - 2em);
+ .uagb-block-84c5a8ab, .uagb-block-a3b417df{
+height: 100%;
+      }
+      .uagb-block-a3b417df{
+      transform: translateX(20%) !important;
+    }
+      .img-photom{
+        z-index: 2; 
+        transform: translateY(40%) scale(130%);
+        position: relative;
+        background-image: url("https://tomruiz.fr//uploads/2025/01/photodeboutmieux-1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .uagb-block-a3b417df{
+width: 50% !important;
+align-self: start !important;
+      }
+    }
+    &-secondview{
+      height: calc(40vh - 2em);
+      @media (max-width: 1450px) {
+        padding: 1em !important;
+      }
+    }
+  }
+
+  #solutions{
+    .uagb-spectra-button-wrapper {
+      margin-top: 20px;
+      text-align: start;
+        @media (max-width: 768px) {
+   text-align: center;
+      }
+    }
+  }
+  #who{
+    .uagb-spectra-button-wrapper {
+      text-align: start;
+    }
+
+    @media (max-width: 768px) {
+      .who-list{
+        text-align: center;
+      }
     }
   }

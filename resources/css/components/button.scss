@@ -24,7 +24,7 @@ background : $blue !important;
       border-radius: 30px;
       padding: 12px 30px;
       transition: all 0.2s ease-in-out;
-  padding: 20px 40px;
+    padding: 20px 40px;
       &:hover {
         transform: scale(1.1);
         cursor: pointer;
@@ -35,3 +35,31 @@ background : $blue !important;
     }
   }
   
+.uagb-modal-button-link, .uagb-forms-main-submit-button, .button-discover{
+  position: relative;
+  z-index: 3;
+  background: $gradient !important;
+  color: $black !important;
+  font-family: $font-cabin;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid $black !important;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  letter-spacing: 4px;
+  border-radius: 30px !important;
+  transition: all 0.2s ease-in-out;
+padding: 20px 40px !important;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: $white !important;
+    background: $black !important;
+    border-color: $orange !important;
+  }
+}
+
+
+.uagb-buttons__wrap{
+  justify-content: center;
+}
